@@ -1,6 +1,8 @@
-﻿namespace Pet1.Models
+﻿using Pet1.Interfaces;
+
+namespace Pet1.Models
 {
-    public class Statistic
+    public class Statistic : IEntity
     {
         public int Id { get; set; }
         public int TotalDays { get; set; }

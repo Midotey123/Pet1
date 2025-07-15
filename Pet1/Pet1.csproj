@@ -9,12 +9,9 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="DTO\" />
     <Folder Include="1\" />
     <Folder Include="Handlers\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
