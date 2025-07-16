@@ -10,6 +10,8 @@ namespace Pet1
         {
             ///TODO: отслеживатель привычек.
             
+            //TODO: спроектировать слои.
+            //TODO: щас чекнуть, как проектировать бизнес-логику, и в какой слой и когда засовывать.
 
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllers();
