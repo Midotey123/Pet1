@@ -1,4 +1,6 @@
-﻿namespace Pet1.Interfaces
+﻿using Domain.Abstractions.Services;
+
+namespace Domain.Abstractions.Reps
 {
     public interface IRep<T>
         where T : class, IEntity

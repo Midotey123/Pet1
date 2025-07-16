@@ -1,7 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Pet1.Models;
+﻿using Domain.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
-namespace Pet1.Data
+
+
+namespace Infrastructure.Services.Posgresql
 {
     public class AppDbContext : DbContext
     {
@@ -34,4 +37,6 @@ namespace Pet1.Data
 
         }
     }
+
 }
+

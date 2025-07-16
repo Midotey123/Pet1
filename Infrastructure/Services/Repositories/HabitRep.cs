@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Pet1.Data;
-using Pet1.Interfaces;
-using Pet1.Models;
+﻿using Application.Interfaces;
+using Domain.Models;
+using Infrastructure.Services.Posgresql;
+using Infrastructure.Services.Repositories;
+using Microsoft.EntityFrameworkCore;
 
-namespace Pet1.Repositories
+
+namespace Infrastructure.Services.Repositories
 {
     public class HabitRep : Rep<Habit>, IHabitRep
     {

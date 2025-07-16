@@ -1,4 +1,4 @@
-﻿namespace Pet1.Interfaces
+﻿namespace Domain.Abstractions.Services
 {
     public interface IEntity 
     {

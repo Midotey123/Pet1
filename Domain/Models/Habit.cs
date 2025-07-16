@@ -1,6 +1,6 @@
-﻿using Pet1.Interfaces;
+﻿using Domain.Abstractions.Services;
 
-namespace Pet1.Models
+namespace Domain.Models
 {
     public class Habit : IEntity
     {

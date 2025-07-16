@@ -1,4 +1,4 @@
-﻿namespace Pet1.Interfaces
+﻿namespace Application.Interfaces
 {
     public interface IAuthService
     {

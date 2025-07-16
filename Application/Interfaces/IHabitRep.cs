@@ -1,6 +1,7 @@
-﻿using Pet1.Models;
+﻿using Domain.Abstractions.Reps;
+using Domain.Models;
 
-namespace Pet1.Interfaces
+namespace Application.Interfaces
 {
     public interface IHabitRep : IRep<Habit>
     {

@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Pet1.Data;
-using Pet1.Interfaces;
+﻿using Domain.Abstractions.Reps;
+using Domain.Abstractions.Services;
+using Infrastructure.Services.Posgresql;
+using Microsoft.EntityFrameworkCore;
 
-namespace Pet1.Repositories
+namespace Infrastructure.Services.Repositories
 {
     public class Rep<T> : IRep<T>
         where T : class, IEntity
