@@ -1,7 +1,6 @@
-
 using Application.Interfaces;
+using Application.Reps;
 using Application.Services;
-using Domain.Abstractions.Reps;
 using Infrastructure.Services.Posgresql;
 using Infrastructure.Services.Repositories;
 
@@ -13,11 +12,9 @@ namespace Pet1
         {
             ///TODO: отслеживатель привычек.
 
-            ///TODO: связать слои.
-            
-            ///TODO: понять как сервисы доменные и репозитории инициалируются в program.
-            ///TODO: понять как связаны infrastructure и application, нужно ли делать интерфейс в application, 
-            ///и его тех.реализацию в infrastructure.
+            ///TODO: связать слои нормально.
+            ///TODO: спроектировать бд, создать модели и связи между ними, репозитории их сделать и сервисы.
+
 
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllers();

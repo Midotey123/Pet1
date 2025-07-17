@@ -1,5 +1,5 @@
-﻿using Domain.Abstractions.Reps;
-using Domain.Abstractions.Services;
+﻿using Application.Reps;
+using Domain.Services;
 using Infrastructure.Services.Posgresql;
 using Microsoft.EntityFrameworkCore;
 

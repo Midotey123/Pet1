@@ -1,6 +1,6 @@
-﻿using Domain.Abstractions.Services;
+﻿using Domain.Services;
 
-namespace Domain.Abstractions.Reps
+namespace Application.Reps
 {
     public interface IRep<T>
         where T : class, IEntity

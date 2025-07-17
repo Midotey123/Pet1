@@ -1,4 +1,4 @@
-﻿namespace Domain.Abstractions.Services
+﻿namespace Domain.Services
 {
     public interface IEntity 
     {

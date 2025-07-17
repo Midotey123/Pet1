@@ -1,4 +1,4 @@
-﻿using Domain.Abstractions.Reps;
+﻿using Application.Reps;
 using Domain.Models;
 
 namespace Application.Interfaces

@@ -1,4 +1,4 @@
-﻿using Domain.Abstractions.Services;
+﻿using Domain.Services;
 
 namespace Domain.Models
 {

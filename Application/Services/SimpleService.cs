@@ -1,5 +1,5 @@
 ﻿using Application.Interfaces;
-using Domain.Abstractions.Reps;
+using Application.Reps;
 using Domain.Models;
 using System;
 using System.Collections.Generic;
