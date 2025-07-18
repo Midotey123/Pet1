@@ -1,9 +1,7 @@
-﻿using Pet1.Interfaces;
-using Pet1.Models;
-
-namespace Pet1.Services
+﻿
+namespace Application.Services
 {
-    public class AuthService : IAuthService
+    public class AuthService : IAuthService  // ???.
     {
         private readonly IRep<User> userRep;
         private readonly IPasswordHashService passwordHashService;

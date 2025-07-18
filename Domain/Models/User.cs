@@ -8,5 +8,6 @@ namespace Domain.Models
         public string Username { get; set; }
         public string PasswordHash { get; set; }
         public ICollection<Habit> Habits { get; set; } = new List<Habit>();
+        public ICollection<Catalog> Catalogs { get; set; } = new List<Catalog>();
     }
 }
