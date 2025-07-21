@@ -1,9 +1,9 @@
 ﻿using Application.Reps;
 using Domain.Services;
-using Infrastructure.Services.Posgresql;
+using Infrastructure.Database.Postgresql;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.Services.Repositories
+namespace Infrastructure.Database.Postgresql.Repositories
 {
     public class Rep<T> : IRep<T>
         where T : class, IEntity

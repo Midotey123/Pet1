@@ -1,9 +1,9 @@
 ﻿using Application.Interfaces;
 using Domain.Models;
-using Infrastructure.Services.Posgresql;
+using Infrastructure.Database.Postgresql;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.Services.Repositories
+namespace Infrastructure.Database.Postgresql.Repositories
 {
     public class StatisticRep : Rep<Statistic>, IStatisticRep
     {
