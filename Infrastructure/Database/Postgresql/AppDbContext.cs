@@ -47,8 +47,7 @@ namespace Infrastructure.Database.Postgresql
             modelBuilder.Entity<Catalog>()  //catalog-habits
                 .HasMany(c => c.Habits)
                 .WithOne(h => h.Catalog)
-                .HasForeignKey(h => h.CatalogId)
-                .IsRequired(); 
+                .HasForeignKey(h => h.CatalogId);
 
         }
     }

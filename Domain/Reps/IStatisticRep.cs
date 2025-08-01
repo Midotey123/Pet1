@@ -1,7 +1,6 @@
-﻿using Application.Reps;
-using Domain.Models;
+﻿using Domain.Models;
 
-namespace Application.Interfaces
+namespace Domain.Reps
 {
     public interface IStatisticRep : IRep<Statistic>
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Enums
 {
-    public enum CatalogEnum
+    public enum CatalogTypeEnum
     {
         Default = 1,
         Favorite = 2,

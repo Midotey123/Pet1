@@ -1,7 +1,7 @@
-﻿using Application.Reps;
-using Domain.Models;
+﻿using Domain.Models;
+using Domain.Reps;
 
-namespace Application.Interfaces
+namespace Domain.Reps
 {
     public interface IHabitRep : IRep<Habit>
     {

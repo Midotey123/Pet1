@@ -1,6 +1,6 @@
 ﻿using Application.DTO;
 using Application.Interfaces;
-using Application.Reps;
+using Domain.Reps;
 using FluentValidation;
 using System;
 using System.Collections.Generic;

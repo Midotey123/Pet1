@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces
 {
-    public interface IUserService
+    public interface IUserUseCase
     {
         public Task<string> Register(UserRegisterPOST user);
         public Task<string> Login(UserLoginPOST user);

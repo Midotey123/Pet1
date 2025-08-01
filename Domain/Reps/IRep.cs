@@ -1,6 +1,6 @@
 ﻿using Domain.Services;
 
-namespace Application.Reps
+namespace Domain.Reps
 {
     public interface IRep<T>
         where T : class, IEntity

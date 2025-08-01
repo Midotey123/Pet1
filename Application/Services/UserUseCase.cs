@@ -11,14 +11,17 @@ using System.Threading.Tasks;
 
 namespace Application.Services
 {
-    public class UserService : IUserService
+    /// <summary>
+    /// TODO:... .
+    /// </summary>
+    public class UserUseCase : IUserUseCase
     {
         private readonly IUserRep rep;
         private readonly IJwtProvideService jwtProvide;
         private readonly IPasswordHashService passwordHash;
         private readonly IValidator<UserRegisterPOST> registerValidator;
         private readonly IValidator<UserLoginPOST> loginValidator;
-        public UserService(IUserRep rep,
+        public UserUseCase(IUserRep rep,
             IJwtProvideService jwtProvide,
             IPasswordHashService passwordHash,
             IValidator<UserRegisterPOST> registerValidator,
