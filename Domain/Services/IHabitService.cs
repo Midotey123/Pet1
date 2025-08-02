@@ -10,14 +10,27 @@ namespace Domain.Services
 {
     public interface IHabitService
     {
-        Task<Result<Habit>> CreateHabit(string title, string? description, bool getUsedToIt, User user, Catalog? catalog);
+        Task<Result<Habit>> CreateHabit(
+            string title,
+            string? description,
+            bool getUsedToIt,
+            User user,
+            Catalog? catalog,
+            CancellationToken token = default);
         Task<Result> UpdateHabit(
-            string title, string? description, bool getUsedToId, Catalog? catalog,
-            int completedDays, int priorityNum
-            );
-        ///TODO: сделать доменный сервис для создания привычки статистики ее, для отметок ежедневных выполнения привычки
-        ///и изменения. Сделать сервис для каталогов, создания, изменения, удаления, некоторые не удалять.
+            string? title,
+            string? description,
+            bool? getUsedToId,
+            Catalog? catalog,
+            int? completedDays,
+            int? priorityNum,
+            Habit habit,
+            Statistic statistic,
+            CancellationToken token = default);
 
-        //Task<Result<Mark>> CreateMark(...);
+        ///TODO: сделат сервис по управлению состоянием привычек.
+
+        //Task<Result<Mark>> CreateMark(...);  ///TODO: в доменный сервис отвечающий за заметки вынести.
     }
+    ///TODO: Сделать сервис для каталогов, создания, изменения, удаления, некоторые не удалять.
 }

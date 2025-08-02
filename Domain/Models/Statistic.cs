@@ -40,5 +40,10 @@ namespace Domain.Models
             Priority = (PriorityEnum)priorityNum;
             return Result.Success();
         }
+        public Result CompleteDay()
+        {
+            CompletedDays++;
+            return Result.Success();
+        }
     }
 }

@@ -13,9 +13,13 @@ namespace Domain.Services
     public class UserService : IUserService
     {
         private readonly IUserRep rep;
-        public UserService(IUserRep rep)
+        private readonly ICatalogRep catalogRep;
+        public UserService(IUserRep rep,
+            ICatalogRep catalogRep)
         {
             this.rep = rep;
+            this.catalogRep = catalogRep;
+
         }
         public async Task<Result<User>> Create(string username, string passwordHash)
         {
@@ -46,8 +50,7 @@ namespace Domain.Services
         }
         public async Task<Result<Catalog>> CreateCatalog(string title, User creator)
         {
-
-            //if()
+            if(await catalogRep.IsTitleUniqueForUser(title, creator))
 
         }
     }
