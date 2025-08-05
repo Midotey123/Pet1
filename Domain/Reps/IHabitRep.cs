@@ -7,5 +7,6 @@ namespace Domain.Reps
     {
         Task<IEnumerable<Habit>> GetWithAll(CancellationToken cToken = default);
         Task<Habit> GetByIdWithAll(int id, CancellationToken cToken = default);
+        Task<bool> IsTitleUnique(string title, CancellationToken cToken = default);
     }
 }

@@ -34,12 +34,14 @@ namespace Domain.Models
             Statistic = statistic;
             return Result.Success();
         }
-        internal Result Update(string title, string? description, bool getUsedToId, Catalog? catalog)
+        internal Result Update(string? title, string? description, bool? getUsedToId, Catalog? catalog)
         {
-            Title = Title;
+            if (title != null)
+                Title = title;
             if (description != null)
                 Description = description;
-            GetUsedToId = getUsedToId;
+            if (getUsedToId != null)
+                GetUsedToId = (bool)getUsedToId;
             if (catalog != null)
                 Catalog = catalog;
             return Result.Success();

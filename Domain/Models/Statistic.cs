@@ -27,14 +27,14 @@ namespace Domain.Models
                 return Result<Statistic>.Failure("Priority with that priority num not exists!");
             return Result<Statistic>.Success(new Statistic(totalDays, (PriorityEnum)priorityNum, habit));
         }
-        internal Result Update(int completedDays, int priorityNum)
+        internal Result Update(/*int completedDays,*/ int priorityNum)
         {
-            if (CompletedDays > completedDays)
-                return Result.Failure("Can't reduce completed days count!");
-            else
-                CompletedDays = completedDays;
-            if (TotalDays <= CompletedDays)
-                IsDone = true;
+            //if (CompletedDays > completedDays)
+            //    return Result.Failure("Can't reduce completed days count!");
+            //else
+            //    CompletedDays = completedDays;
+            //if (TotalDays <= CompletedDays)
+            //    IsDone = true;
             if (!Enum.IsDefined(typeof(PriorityEnum), priorityNum))
                 return Result<Statistic>.Failure("Priority with that priority num not exists!");
             Priority = (PriorityEnum)priorityNum;

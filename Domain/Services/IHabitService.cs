@@ -14,6 +14,7 @@ namespace Domain.Services
             string title,
             string? description,
             bool getUsedToIt,
+            int totalDays,
             User user,
             Catalog? catalog,
             CancellationToken token = default);
@@ -22,13 +23,10 @@ namespace Domain.Services
             string? description,
             bool? getUsedToId,
             Catalog? catalog,
-            int? completedDays,
             int? priorityNum,
             Habit habit,
             Statistic statistic,
             CancellationToken token = default);
-
-        ///TODO: сделат сервис по управлению состоянием привычек.
 
         //Task<Result<Mark>> CreateMark(...);  ///TODO: в доменный сервис отвечающий за заметки вынести.
     }
