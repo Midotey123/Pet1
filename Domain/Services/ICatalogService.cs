@@ -10,6 +10,7 @@ namespace Domain.Services
 {
     public interface ICatalogService
     {
+        ///TODO: Сделать сервис для каталогов, создания, изменения, удаления, некоторые не удалять.
         Task<Result<Catalog>> CreateCatalog(string title, User creator, CancellationToken cToken = default);
     }
 }

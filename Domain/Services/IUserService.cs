@@ -11,6 +11,5 @@ namespace Domain.Services
     public interface IUserService
     {
         Task<Result<User>> Create(string username, string passwordHash, CancellationToken cToken = default);
-        ///TODO: вынести в отдельный сервис катологи.
     }
 }

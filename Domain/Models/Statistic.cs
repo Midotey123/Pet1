@@ -40,6 +40,10 @@ namespace Domain.Models
             Priority = (PriorityEnum)priorityNum;
             return Result.Success();
         }
+        /// <summary>
+        /// TODO: вывести в сервис, делать проверку когда в последний раз выполнял, сделать раз в день отметку.
+        /// </summary>
+        /// <returns></returns>
         public Result CompleteDay()
         {
             CompletedDays++;

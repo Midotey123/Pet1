@@ -21,9 +21,9 @@ namespace Domain.Services
             this.catalogRep = catalogRep;
 
         }
-        public async Task<Result<User>> Create(string username, string passwordHash)
+        public async Task<Result<User>> Create(string username, string passwordHash, CancellationToken cToken)
         {
-            if (!await rep.IsUniqueUsername(username))
+            if (!await rep.IsUniqueUsername(username, cToken))
                 return Result<User>.Failure("Username is taken!");
             var userResult = User.Create(username, passwordHash);
             if (!userResult.IsSuccess)
@@ -47,11 +47,6 @@ namespace Domain.Services
             if (!uCCR.IsSuccess)
                 return Result<User>.Failure(uCCR.Error);
             return userResult;
-        }
-        public async Task<Result<Catalog>> CreateCatalog(string title, User creator)
-        {
-            if(await catalogRep.IsTitleUniqueForUser(title, creator))
-
         }
     }
 }

@@ -9,6 +9,6 @@ namespace Domain.Reps
 {
     public interface ICatalogRep : IRep<Catalog>
     {
-        Task<bool> IsTitleUniqueForUser(string title, User user, CancellationToken cToken = default);
+        //Task<bool> IsTitleUniqueForUser(string title, User user, CancellationToken cToken = default);
     }
 }

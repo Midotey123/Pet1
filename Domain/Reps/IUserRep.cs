@@ -9,6 +9,6 @@ namespace Domain.Reps
 {
     public interface IUserRep : IRep<User>
     {
-        Task<bool> IsUniqueUsername(string username);
+        Task<bool> IsUniqueUsername(string username, CancellationToken cToken = default);
     }
 }
