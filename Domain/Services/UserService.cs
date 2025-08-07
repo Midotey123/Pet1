@@ -28,18 +28,18 @@ namespace Domain.Services
             var userResult = User.Create(username, passwordHash);
             if (!userResult.IsSuccess)
                 return userResult;
-            var fCR = Catalog.Create("Favorite", userResult.Value, (int)CatalogTypeEnum.Favorite);
-            if (!fCR.IsSuccess)
-                return Result<User>.Failure(fCR.Error);
+            //var fCR = Catalog.Create("Favorite", userResult.Value, (int)CatalogTypeEnum.Favorite);
+            //if (!fCR.IsSuccess)
+                //return Result<User>.Failure(fCR.Error);
             var hCR = Catalog.Create("Hidden", userResult.Value, (int)CatalogTypeEnum.Hidden);
             if (!hCR.IsSuccess)
                 return Result<User>.Failure(hCR.Error);
             var cCR = Catalog.Create("Completed", userResult.Value, (int)CatalogTypeEnum.Completed);
             if (!cCR.IsSuccess)
                 return Result<User>.Failure(cCR.Error);
-            var uFCR = userResult.Value.AddCatalog(fCR.Value);
-            if (!uFCR.IsSuccess)
-                return Result<User>.Failure(uFCR.Error);
+            //var uFCR = userResult.Value.AddCatalog(fCR.Value);
+            //if (!uFCR.IsSuccess)
+            //    return Result<User>.Failure(uFCR.Error);
             var uHCR = userResult.Value.AddCatalog(hCR.Value);
             if (!uHCR.IsSuccess)
                 return Result<User>.Failure(uHCR.Error);

@@ -44,7 +44,7 @@ namespace Domain.Models
         /// TODO: вывести в сервис, делать проверку когда в последний раз выполнял, сделать раз в день отметку.
         /// </summary>
         /// <returns></returns>
-        public Result CompleteDay()
+        internal Result CompleteDay()
         {
             CompletedDays++;
             return Result.Success();

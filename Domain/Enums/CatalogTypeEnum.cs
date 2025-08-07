@@ -8,9 +8,12 @@ namespace Domain.Enums
 {
     public enum CatalogTypeEnum
     {
+        //Default = 1,
+        //Favorite = 2, ///TODO: потом в будущем при желании добавить приоритетные каталоги.
+        //Hidden = 3,
+        //Completed = 4
         Default = 1,
-        Favorite = 2,
-        Hidden = 3,
-        Completed = 4
+        Hidden = 2,
+        Completed = 3
     }
 }

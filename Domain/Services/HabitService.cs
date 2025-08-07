@@ -59,6 +59,18 @@ namespace Domain.Services
             if (title != null)
                 if (!await habitRep.IsTitleUnique(title, token))
                     return Result.Failure("Habit's title is already taken by some of user's habits!");
+            ///TODO: вначале идет обновление привычки, потом им присвоение в случае скрытия - hidden.
+            ///В случае выполнения привычки нельзя поменять её каталог.
+            ///TODO: автоматом перенос в каталог выполненных отправляется через метод ежедневной отметки.
+            if (priorityNum != null)
+            {
+                if (!Enum.IsDefined(typeof(PriorityEnum), priorityNum))
+                    return Result.Failure("Priority with that num not exists!");
+                ///TODO: проверка complete и hidden приоритет, и перевод в их эти каталоги автоматом.
+                ///Сюда как то каталоги с этими типами достать этого же пользователя.
+                if ((PriorityEnum)priorityNum == PriorityEnum.Hidden)
+                    catalog = habit.User.Catalogs.First(c => c.Type == CatalogTypeEnum.Hidden);
+            }
             var habitResult = habit.Update(title, description, getUsedToId, catalog);
             if (!habitResult.IsSuccess)
                 return habitResult;
@@ -67,6 +79,8 @@ namespace Domain.Services
             var statisticResult = statistic.Update((int)priorityNum);
             if (!statisticResult.IsSuccess)
                 return statisticResult;
+            ///TODO: правила.
+
             return Result.Success();
         }
     }
